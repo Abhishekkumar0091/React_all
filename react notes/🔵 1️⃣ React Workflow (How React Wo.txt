@@ -1,0 +1,70 @@
+🔵 1️⃣ React Workflow (How React Works Step-by-Step)
+=============================================
+
+✅ Step 1: Application Starts
+------------------------------
+
+React starts from the root component (usually App).
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+
+✅ Step 2: Component Rendering
+--------------------------------
+React calls the component function
+JSX is returned
+JSX is converted to JavaScript
+Virtual DOM is created
+
+✅ Step 3: Virtual DOM Created
+-------------------------------
+React creates a lightweight copy of the UI (Virtual DOM).
+
+✅ Step 4: State / Props Change
+-------------------------------
+
+When:
+useState() updates
+Parent sends new props
+Context changes
+
+👉 React re-renders the component.
+
+✅ Step 5: Reconciliation (Diffing)
+-----------------------------------
+=>React compares:
+-> Old Virtual DOM
+-> New Virtual DOM
+
+✅ Step 6: Real DOM Update
+--------------------------
+Only changed parts update in the browser.
+🚀 This makes React fast.
+
+🌳 2️⃣ React Component Tree
+------------------------
+What is Component Tree?
+-> A Component Tree shows how components are connected (Parent → Child structure).
+
+Example Structure
+------------------
+<App />
+ ├── <Navbar />
+ ├── <Dashboard />
+ │     ├── <WeatherCard />
+ │     ├── <CropRecommendation />
+ │     └── <SoilInfo />
+ └── <Footer />
+
+🔁 Data Flow in Component Tree
+-------------------------------
+
+React follows Unidirectional Data Flow
+Parent ➝ Child
+Example:
+-------
+
+function App() {
+  const name = "Abhishek";
+  return <Child user={name} />;
+}
+
+👉 Data flows downward only.

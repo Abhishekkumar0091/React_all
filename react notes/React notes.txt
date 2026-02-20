@@ -1,0 +1,100 @@
+React notes
+===========
+
+Evaluation in React
+-------------------
+
+-> In React, evaluation means:
+-> Executing JavaScript expressions
+-> Rendering JSX
+-> Updating UI when state/props change
+
+👉 React evaluates expressions inside { } in JSX.
+
+✅ Example: Expression Evaluation in JSX
+----------------------------------------
+ 
+function App() {
+  const num = 5;
+
+  return (
+    <div>
+      <h1>{num + 10}</h1>   {/* Expression evaluated here */}
+    </div>
+  );
+}
+
+✅ What is Babel?
+------------------
+
+-> Babel is a JavaScript compiler (transpiler).
+
+👉 It converts modern JavaScript (ES6+) and JSX into older JavaScript (ES5) so that all browsers can understand it.
+
+✅ JSX Definition
+------------------
+
+JSX (JavaScript XML) is a syntax used in React that looks like HTML but is written inside JavaScript.
+
+👉 It makes UI code easy to read and write.
+
+Why JSX is Used?
+----------------
+Without JSX, writing UI in React is difficult.
+
+❌ Without JSX
+---------------
+=> const element = React.createElement(
+  "h1",
+  null,
+  "Hello Abhishek"
+);
+
+✅ With JSX
+------------
+=> const element = <h1>Hello Abhishek</h1>;
+
+✔ Cleaner
+✔ Easier to understand
+✔ Looks like HTML
+
+🔄 How JSX Works Internally?
+----------------------------
+
+-> JSX is not understood by browsers directly.
+   
+It is converted by Babel into:
+
+=> React.createElement("h1", null, "Hello Abhishek");
+
+-> So JSX → JavaScript → Browser renders UI.
+
+
+📌 JSX Rules (Important for Exams & Interviews)
+
+1️⃣ Must return only one parent element
+
+return (
+  <div>
+    <h1>Hello</h1>
+    <p>Welcome</p>
+  </div>
+);
+
+2️⃣ Use className instead of class
+
+<div className="container"></div>
+
+3️⃣ Use {} to write JavaScript inside JSX
+
+const name = "Abhishek";
+<h1>Hello {name}</h1>
+
+4️⃣ Self-closing tags must be closed
+
+<img src="image.jpg" />
+
+
+
+
+
